@@ -1,4 +1,4 @@
-import { Home } from "lucide-react";
+import Home from "./pages/Home";
 
 function App() {
   return <Home />;
