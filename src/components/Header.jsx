@@ -1,23 +1,25 @@
 import React from "react";
 import Link from "./Link";
 import { UserRound } from "lucide-react";
+import Hero from "./Hero";
 
 function Header() {
   return (
-    <header className="bg-gray-800 text-white w-full h-15">
-      <nav className="flex items-center justify-between font-bold mx-3 py-2">
-        <div className="space-x-6">
+    <Hero>
+      <header className="flex justify-between bg-slate-800/60 text-white w-full h-15 px-4">
+        <img src="../src/assets/money.png" className="p-2"/>
+        <nav className="flex items-center font-bold gap-10">
           <Link path="/">Home</Link>
-          <Link path="/teste">Teste investidor</Link>
+          <Link path="/teste">Investidor</Link>
           <Link path="/contato">Contato</Link>
           <Link path="/sobre">Sobre</Link>
-        </div>
-        <button className="flex gap-1.5 border-2 border-white p-2 rounded-2xl px-4 py-2 hover:bg-white hover:text-black transition-colors duration-500 cursor-pointer">
-          <UserRound />
-          LOGIN
+        </nav>
+        <button className="flex gap-2 border-2 border-white px-5 py-2 rounded-2xl hover:bg-white hover:text-black transition-colors duration-500 cursor-pointer my-auto font-bold">
+            <UserRound />
+            Login
         </button>
-      </nav>
-    </header>
+      </header>
+    </Hero>
   );
 }
 
